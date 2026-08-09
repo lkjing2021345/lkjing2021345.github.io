@@ -508,3 +508,195 @@ h1, h2, h3, h4 {
         animation: none;
     }
 }
+
+/* ============================================================
+   26. 加载动画 —— 樱花粉模糊背景 + 黑云下雨 + 像素小人淋雨
+   ============================================================ */
+
+// 全屏遮罩：粉红渐变 + 模糊（相机未对焦感），加载完成后"对焦"消失
+#site-loading {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse at 50% 42%, #ffe0e8 0%, #ffc3d2 42%, #f78fb0 100%);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    transition: opacity 0.5s ease, backdrop-filter 0.5s ease, visibility 0.5s ease;
+}
+
+#site-loading.is-hidden {
+    opacity: 0;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.sl-scene {
+    position: relative;
+    width: 280px;
+    height: 260px;
+}
+
+// ---- 黑云（像素块拼接）----
+.sl-cloud {
+    position: absolute;
+    left: calc(50% - 36px);
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    background: #131313;
+    box-shadow:
+        8px 0 0 #131313, 16px 0 0 #131313,
+        0 8px 0 #131313, 8px 8px 0 #131313, 16px 8px 0 #131313, 24px 8px 0 #131313, 32px 8px 0 #131313,
+        -8px 16px 0 #131313, 0 16px 0 #131313, 8px 16px 0 #131313, 16px 16px 0 #131313, 24px 16px 0 #131313, 32px 16px 0 #131313, 40px 16px 0 #131313,
+        -16px 24px 0 #131313, -8px 24px 0 #131313, 0 24px 0 #131313, 8px 24px 0 #131313, 16px 24px 0 #131313, 24px 24px 0 #131313, 32px 24px 0 #131313, 40px 24px 0 #131313, 48px 24px 0 #131313;
+    animation: sl-cloud-bob 3.2s ease-in-out infinite;
+}
+
+@keyframes sl-cloud-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+}
+
+// ---- 黑雨滴：从云底落到地面，循环 ----
+.sl-rain i {
+    position: absolute;
+    top: 44px;
+    left: 0;
+    width: 2px;
+    height: 11px;
+    background: #111;
+    border-radius: 1px;
+    opacity: 0;
+    animation: sl-rain-fall 0.85s linear infinite;
+}
+
+@keyframes sl-rain-fall {
+    0%   { transform: translateY(0); opacity: 0; }
+    10%  { opacity: 0.9; }
+    90%  { opacity: 0.5; }
+    100% { transform: translateY(184px); opacity: 0.12; }
+}
+
+.sl-rain i:nth-child(1)  { left: 18px;  animation-delay: -0.05s; }
+.sl-rain i:nth-child(2)  { left: 42px;  animation-delay: -0.35s; }
+.sl-rain i:nth-child(3)  { left: 66px;  animation-delay: -0.70s; }
+.sl-rain i:nth-child(4)  { left: 90px;  animation-delay: -0.18s; }
+.sl-rain i:nth-child(5)  { left: 112px; animation-delay: -0.52s; }
+.sl-rain i:nth-child(6)  { left: 138px; animation-delay: -0.28s; }
+.sl-rain i:nth-child(7)  { left: 162px; animation-delay: -0.66s; }
+.sl-rain i:nth-child(8)  { left: 186px; animation-delay: -0.12s; }
+.sl-rain i:nth-child(9)  { left: 208px; animation-delay: -0.44s; }
+.sl-rain i:nth-child(10) { left: 232px; animation-delay: -0.80s; }
+.sl-rain i:nth-child(11) { left: 254px; animation-delay: -0.22s; }
+.sl-rain i:nth-child(12) { left: 268px; animation-delay: -0.58s; }
+
+// ---- 地面 ----
+.sl-ground {
+    position: absolute;
+    left: 50%;
+    top: 232px;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 4px;
+    background: #131313;
+    box-shadow: 0 6px 0 rgba(19, 19, 19, 0.25);
+}
+
+// ---- 像素小人：黑斗篷 + 猫耳，站在雨中 ----
+.sl-kid {
+    position: absolute;
+    left: 50%;
+    top: 108px;
+    width: 56px;
+    height: 124px;
+    transform: translateX(-50%);
+}
+
+.sl-ear {
+    position: absolute;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    background: #111;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.sl-ear-l { left: 2px; }
+.sl-ear-r { right: 2px; }
+
+.sl-hood {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 40px;
+    height: 24px;
+    background: #161616;
+    border-radius: 2px;
+}
+
+.sl-face {
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    width: 24px;
+    height: 16px;
+    background: #3c3c3c;
+    border-radius: 2px;
+}
+
+.sl-eye {
+    position: absolute;
+    top: 3px;
+    width: 9px;
+    height: 13px;
+    background: #000;
+    border-radius: 50%;
+}
+
+.sl-eye-l { left: 2px; }
+.sl-eye-r { right: 2px; }
+
+.sl-cloak {
+    position: absolute;
+    top: 28px;
+    left: 4px;
+    width: 48px;
+    height: 56px;
+    background: #111;
+    clip-path: polygon(14px 0, 34px 0, 48px 56px, 0 56px);
+}
+
+// 腿：从斗篷下伸出的两条直线
+.sl-leg {
+    position: absolute;
+    top: 96px;
+    width: 5px;
+    height: 28px;
+    background: #0b0b0b;
+}
+
+.sl-leg-l { left: 15px; }
+.sl-leg-r { right: 15px; }
+
+// 减动效偏好：加载页不动画，仅静态展示
+@media (prefers-reduced-motion: reduce) {
+    #site-loading {
+        backdrop-filter: blur(0);
+        -webkit-backdrop-filter: blur(0);
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .sl-cloud,
+    .sl-rain i {
+        animation: none;
+    }
+
+    .sl-rain i {
+        opacity: 0.35;
+    }
+}

@@ -254,6 +254,29 @@ highlights.forEach(highlight => {
         });
     }
 
+    // ---- 加载动画收场：资源加载完 + 最短展示时长后"对焦"淡出 ----
+    const siteLoading = document.getElementById('site-loading');
+    if (siteLoading) {
+        const t0 = performance.now();
+        let hidden = false;
+        const hide = () => {
+            if (hidden) return;
+            hidden = true;
+            const wait = Math.max(0, 900 - (performance.now() - t0));
+            setTimeout(() => {
+                siteLoading.classList.add('is-hidden');
+                setTimeout(() => siteLoading.remove(), 600);
+            }, wait);
+        };
+        if (document.readyState === 'complete') {
+            hide();
+        } else {
+            window.addEventListener('load', hide);
+        }
+        // 兜底：某个资源挂起时最多等 6 秒，避免一直卡在加载页
+        setTimeout(hide, 6000);
+    }
+
     resize();
     window.addEventListener('resize', resize);
     requestAnimationFrame(frame);
