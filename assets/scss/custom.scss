@@ -643,31 +643,32 @@ h1, h2, h3, h4 {
 .sl-ear-l { left: 2px; }
 .sl-ear-r { right: 2px; }
 
+// 头占全身约 1/4（萝莉/二头身比例，大头）
 .sl-hood {
     position: absolute;
-    top: 12px;
+    top: 8px;
     left: 6px;
     width: 32px;
-    height: 18px;
+    height: 24px;
     background: #131313;
 }
 
 // 白色的脸
 .sl-face {
     position: absolute;
-    top: 16px;
+    top: 12px;
     left: 10px;
     width: 24px;
-    height: 12px;
+    height: 14px;
     background: #f0f0f0;
 }
 
-// 像素化的眼睛：黑色小方块
+// 像素化的眼睛：黑色大方块
 .sl-eye {
     position: absolute;
-    top: 3px;
-    width: 5px;
-    height: 8px;
+    top: 4px;
+    width: 6px;
+    height: 9px;
     background: #111;
 }
 
@@ -677,27 +678,27 @@ h1, h2, h3, h4 {
 // 黑斗篷：被风吹起（风向右，与斜雨方向一致），像素级帧动画
 .sl-cloak {
     position: absolute;
-    top: 28px;
+    top: 30px;
     left: 0;
     width: 44px;
-    height: 38px;
+    height: 44px;
     background: #101010;
-    clip-path: polygon(12px 0, 32px 0, 44px 38px, 0 38px);
+    clip-path: polygon(12px 0, 32px 0, 44px 44px, 0 44px);
     animation: sl-cloak-flap 1.2s steps(1, end) infinite;
 }
 
 @keyframes sl-cloak-flap {
-    0%, 100% { clip-path: polygon(12px 0, 32px 0, 44px 38px, 0 38px); }
-    33%      { clip-path: polygon(12px 0, 32px 0, 54px 30px, 2px 40px); }
-    66%      { clip-path: polygon(12px 0, 32px 0, 40px 44px, 6px 32px); }
+    0%, 100% { clip-path: polygon(12px 0, 32px 0, 44px 44px, 0 44px); }
+    33%      { clip-path: polygon(12px 0, 32px 0, 54px 36px, 2px 46px); }
+    66%      { clip-path: polygon(12px 0, 32px 0, 40px 48px, 6px 40px); }
 }
 
-// 腿：从斗篷下伸出的两条直线
+// 腿：短腿（约占全身 1/5），从斗篷下伸出两条直线
 .sl-leg {
     position: absolute;
-    top: 62px;
+    top: 73px;
     width: 4px;
-    height: 30px;
+    height: 21px;
     background: #0b0b0b;
 }
 
