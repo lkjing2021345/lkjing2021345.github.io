@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on Shimmer の blog</title>
-        <link>http://localhost:63382/post/</link>
+        <link>http://localhost:63959/post/</link>
         <description>Recent content in Posts on Shimmer の blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Thu, 30 Jul 2026 14:06:45 +0800</lastBuildDate><atom:link href="http://localhost:63382/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 30 Jul 2026 14:06:45 +0800</lastBuildDate><atom:link href="http://localhost:63959/post/index.xml" rel="self" type="application/rss+xml" /><item>
             <title>My First Post</title>
-            <link>http://localhost:63382/post/my-first-post/</link>
+            <link>http://localhost:63959/post/my-first-post/</link>
             <pubDate>Thu, 30 Jul 2026 14:06:45 +0800</pubDate>
-            <guid>http://localhost:63382/post/my-first-post/</guid>
+            <guid>http://localhost:63959/post/my-first-post/</guid>
             <description>&lt;p&gt;Hello，我是Shimmer，这是我的第一篇博客，以后我会在这里分享一些CTF赛题、网络安全知识以及我的一些生活趣事。&lt;/p&gt;&#xA;</description>
         </item></channel>
 </rss>
