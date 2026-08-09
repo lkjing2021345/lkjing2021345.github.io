@@ -685,11 +685,12 @@ h1, h2, h3, h4 {
 .sl-eye-r { left: 18px; }
 
 // 黑斗篷 = 身体：比头宽、向下展开，台阶颗粒边缘 + 随风飘动
+// 风向右：左摆上掀、右摆拖长，斗篷视觉重心偏右
 .sl-cloak {
     position: absolute;
     top: 30px;
     left: 3px;
-    width: 60px;
+    width: 66px;
     height: 36px;
     background: #101010;
     clip-path: polygon(18px 0, 42px 0, 42px 3px, 45px 3px, 45px 6px, 48px 6px, 48px 9px, 51px 9px, 51px 12px, 54px 12px, 54px 15px, 57px 15px, 57px 18px, 60px 18px, 60px 36px, 0 36px, 0 18px, 3px 18px, 3px 15px, 6px 15px, 6px 12px, 9px 12px, 9px 9px, 12px 9px, 12px 6px, 15px 6px, 15px 3px, 18px 3px);
@@ -698,8 +699,8 @@ h1, h2, h3, h4 {
 
 @keyframes sl-cloak-flap {
     0%, 100% { clip-path: polygon(18px 0, 42px 0, 42px 3px, 45px 3px, 45px 6px, 48px 6px, 48px 9px, 51px 9px, 51px 12px, 54px 12px, 54px 15px, 57px 15px, 57px 18px, 60px 18px, 60px 36px, 0 36px, 0 18px, 3px 18px, 3px 15px, 6px 15px, 6px 12px, 9px 12px, 9px 9px, 12px 9px, 12px 6px, 15px 6px, 15px 3px, 18px 3px); }
-    33%      { clip-path: polygon(18px 0, 42px 0, 42px 3px, 45px 3px, 45px 6px, 48px 6px, 48px 9px, 51px 9px, 51px 12px, 54px 12px, 54px 15px, 57px 15px, 57px 18px, 60px 18px, 60px 24px, 52px 28px, 44px 33px, 40px 36px, 0 36px, 0 18px, 3px 18px, 3px 15px, 6px 15px, 6px 12px, 9px 12px, 9px 9px, 12px 9px, 12px 6px, 15px 6px, 15px 3px, 18px 3px); }
-    66%      { clip-path: polygon(18px 0, 42px 0, 42px 3px, 45px 3px, 45px 6px, 48px 6px, 48px 9px, 51px 9px, 51px 12px, 54px 12px, 54px 15px, 57px 15px, 57px 18px, 60px 18px, 60px 36px, 16px 36px, 12px 30px, 9px 24px, 6px 18px, 3px 18px, 3px 15px, 6px 15px, 6px 12px, 9px 12px, 9px 9px, 12px 9px, 12px 6px, 15px 6px, 15px 3px, 18px 3px); }
+    33%      { clip-path: polygon(18px 0, 42px 0, 42px 3px, 45px 3px, 45px 6px, 48px 6px, 48px 9px, 51px 9px, 51px 12px, 54px 12px, 54px 15px, 57px 15px, 57px 18px, 60px 18px, 60px 36px, 12px 36px, 6px 30px, 3px 24px, 3px 18px, 3px 15px, 6px 15px, 6px 12px, 9px 12px, 9px 9px, 12px 9px, 12px 6px, 15px 6px, 15px 3px, 18px 3px); }
+    66%      { clip-path: polygon(18px 0, 42px 0, 42px 3px, 45px 3px, 45px 6px, 48px 6px, 48px 9px, 51px 9px, 51px 12px, 54px 12px, 54px 15px, 57px 15px, 57px 18px, 63px 18px, 66px 27px, 66px 36px, 20px 36px, 12px 30px, 9px 24px, 6px 18px, 3px 18px, 3px 15px, 6px 15px, 6px 12px, 9px 12px, 9px 9px, 12px 9px, 12px 6px, 15px 6px, 15px 3px, 18px 3px); }
 }
 
 // 腿：短腿紧贴斗篷底，三帧飘动姿态下都保持被斗篷覆盖
