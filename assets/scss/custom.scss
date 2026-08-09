@@ -630,94 +630,97 @@ h1, h2, h3, h4 {
     margin-left: -22px;
 }
 
-// ---- 像素小人：大头短腿的萝莉比例，全身 4px 颗粒像素拼块 ----
+// ---- 像素小人：大头短腿萝莉，3px 小颗粒拼块，头窄身宽 ----
 .sl-kid {
     position: absolute;
     left: 50%;
-    top: 146px;
-    width: 48px;
-    height: 92px;
-    margin-left: -24px;
+    top: 151px;
+    width: 60px;
+    height: 84px;
+    margin-left: -30px;
 }
 
-// 头：黑色像素头（48x36），M 形猫耳内嵌头顶、不超出头范围
+// 头：黑色像素头（48x30），M 形猫耳内嵌头顶、不超出头范围
 .sl-hood {
     position: absolute;
-    left: 0;
+    left: 6px;
     top: 0;
-    width: 4px;
-    height: 4px;
+    width: 3px;
+    height: 3px;
     background: #131313;
     box-shadow:
-        8px 0 0 #131313, 36px 0 0 #131313,
-        8px 4px 0 #131313, 12px 4px 0 #131313, 32px 4px 0 #131313, 36px 4px 0 #131313,
-        8px 8px 0 #131313, 12px 8px 0 #131313, 16px 8px 0 #131313, 28px 8px 0 #131313, 32px 8px 0 #131313, 36px 8px 0 #131313,
-        8px 12px 0 #131313, 12px 12px 0 #131313, 16px 12px 0 #131313, 20px 12px 0 #131313, 24px 12px 0 #131313, 28px 12px 0 #131313, 32px 12px 0 #131313,
-        4px 16px 0 #131313, 8px 16px 0 #131313, 12px 16px 0 #131313, 16px 16px 0 #131313, 20px 16px 0 #131313, 24px 16px 0 #131313, 28px 16px 0 #131313, 32px 16px 0 #131313, 36px 16px 0 #131313, 40px 16px 0 #131313,
-        0 20px 0 #131313, 4px 20px 0 #131313, 8px 20px 0 #131313, 12px 20px 0 #131313, 16px 20px 0 #131313, 20px 20px 0 #131313, 24px 20px 0 #131313, 28px 20px 0 #131313, 32px 20px 0 #131313, 36px 20px 0 #131313, 40px 20px 0 #131313, 44px 20px 0 #131313,
-        0 24px 0 #131313, 4px 24px 0 #131313, 8px 24px 0 #131313, 12px 24px 0 #131313, 16px 24px 0 #131313, 20px 24px 0 #131313, 24px 24px 0 #131313, 28px 24px 0 #131313, 32px 24px 0 #131313, 36px 24px 0 #131313, 40px 24px 0 #131313, 44px 24px 0 #131313,
-        0 28px 0 #131313, 4px 28px 0 #131313, 8px 28px 0 #131313, 12px 28px 0 #131313, 16px 28px 0 #131313, 20px 28px 0 #131313, 24px 28px 0 #131313, 28px 28px 0 #131313, 32px 28px 0 #131313, 36px 28px 0 #131313, 40px 28px 0 #131313, 44px 28px 0 #131313,
-        0 32px 0 #131313, 4px 32px 0 #131313, 8px 32px 0 #131313, 12px 32px 0 #131313, 16px 32px 0 #131313, 20px 32px 0 #131313, 24px 32px 0 #131313, 28px 32px 0 #131313, 32px 32px 0 #131313, 36px 32px 0 #131313, 40px 32px 0 #131313, 44px 32px 0 #131313;
+        12px 0 0 #131313, 15px 0 0 #131313, 30px 0 0 #131313, 33px 0 0 #131313,
+        12px 3px 0 #131313, 15px 3px 0 #131313, 30px 3px 0 #131313, 33px 3px 0 #131313,
+        9px 6px 0 #131313, 12px 6px 0 #131313, 15px 6px 0 #131313, 18px 6px 0 #131313, 27px 6px 0 #131313, 30px 6px 0 #131313, 33px 6px 0 #131313, 36px 6px 0 #131313,
+        9px 9px 0 #131313, 12px 9px 0 #131313, 15px 9px 0 #131313, 18px 9px 0 #131313, 21px 9px 0 #131313, 24px 9px 0 #131313, 27px 9px 0 #131313, 30px 9px 0 #131313, 33px 9px 0 #131313, 36px 9px 0 #131313,
+        6px 12px 0 #131313, 9px 12px 0 #131313, 12px 12px 0 #131313, 15px 12px 0 #131313, 18px 12px 0 #131313, 21px 12px 0 #131313, 24px 12px 0 #131313, 27px 12px 0 #131313, 30px 12px 0 #131313, 33px 12px 0 #131313, 36px 12px 0 #131313, 39px 12px 0 #131313,
+        3px 15px 0 #131313, 6px 15px 0 #131313, 9px 15px 0 #131313, 12px 15px 0 #131313, 15px 15px 0 #131313, 18px 15px 0 #131313, 21px 15px 0 #131313, 24px 15px 0 #131313, 27px 15px 0 #131313, 30px 15px 0 #131313, 33px 15px 0 #131313, 36px 15px 0 #131313, 39px 15px 0 #131313, 42px 15px 0 #131313,
+        0 18px 0 #131313, 3px 18px 0 #131313, 6px 18px 0 #131313, 9px 18px 0 #131313, 12px 18px 0 #131313, 15px 18px 0 #131313, 18px 18px 0 #131313, 21px 18px 0 #131313, 24px 18px 0 #131313, 27px 18px 0 #131313, 30px 18px 0 #131313, 33px 18px 0 #131313, 36px 18px 0 #131313, 39px 18px 0 #131313, 42px 18px 0 #131313, 45px 18px 0 #131313,
+        0 21px 0 #131313, 3px 21px 0 #131313, 6px 21px 0 #131313, 9px 21px 0 #131313, 12px 21px 0 #131313, 15px 21px 0 #131313, 18px 21px 0 #131313, 21px 21px 0 #131313, 24px 21px 0 #131313, 27px 21px 0 #131313, 30px 21px 0 #131313, 33px 21px 0 #131313, 36px 21px 0 #131313, 39px 21px 0 #131313, 42px 21px 0 #131313, 45px 21px 0 #131313,
+        3px 24px 0 #131313, 6px 24px 0 #131313, 9px 24px 0 #131313, 12px 24px 0 #131313, 15px 24px 0 #131313, 18px 24px 0 #131313, 21px 24px 0 #131313, 24px 24px 0 #131313, 27px 24px 0 #131313, 30px 24px 0 #131313, 33px 24px 0 #131313, 36px 24px 0 #131313, 39px 24px 0 #131313, 42px 24px 0 #131313,
+        6px 27px 0 #131313, 9px 27px 0 #131313, 12px 27px 0 #131313, 15px 27px 0 #131313, 18px 27px 0 #131313, 21px 27px 0 #131313, 24px 27px 0 #131313, 27px 27px 0 #131313, 30px 27px 0 #131313, 33px 27px 0 #131313, 36px 27px 0 #131313, 39px 27px 0 #131313;
 }
 
-// 圆形的白色像素脸（24x24，像素圆）
+// 圆形的白色像素脸（30x24，像素圆）
 .sl-face {
     position: absolute;
-    left: 12px;
-    top: 4px;
-    width: 4px;
-    height: 4px;
+    left: 15px;
+    top: 3px;
+    width: 3px;
+    height: 3px;
     background: #f0f0f0;
     box-shadow:
-        8px 0 0 #f0f0f0, 12px 0 0 #f0f0f0,
-        4px 4px 0 #f0f0f0, 8px 4px 0 #f0f0f0, 12px 4px 0 #f0f0f0, 16px 4px 0 #f0f0f0,
-        0 8px 0 #f0f0f0, 4px 8px 0 #f0f0f0, 8px 8px 0 #f0f0f0, 12px 8px 0 #f0f0f0, 16px 8px 0 #f0f0f0, 20px 8px 0 #f0f0f0,
-        0 12px 0 #f0f0f0, 4px 12px 0 #f0f0f0, 8px 12px 0 #f0f0f0, 12px 12px 0 #f0f0f0, 16px 12px 0 #f0f0f0, 20px 12px 0 #f0f0f0,
-        4px 16px 0 #f0f0f0, 8px 16px 0 #f0f0f0, 12px 16px 0 #f0f0f0, 16px 16px 0 #f0f0f0,
-        8px 20px 0 #f0f0f0, 12px 20px 0 #f0f0f0;
+        6px 0 0 #f0f0f0, 9px 0 0 #f0f0f0, 12px 0 0 #f0f0f0, 15px 0 0 #f0f0f0, 18px 0 0 #f0f0f0, 21px 0 0 #f0f0f0,
+        3px 3px 0 #f0f0f0, 6px 3px 0 #f0f0f0, 9px 3px 0 #f0f0f0, 12px 3px 0 #f0f0f0, 15px 3px 0 #f0f0f0, 18px 3px 0 #f0f0f0, 21px 3px 0 #f0f0f0, 24px 3px 0 #f0f0f0,
+        0 6px 0 #f0f0f0, 3px 6px 0 #f0f0f0, 6px 6px 0 #f0f0f0, 9px 6px 0 #f0f0f0, 12px 6px 0 #f0f0f0, 15px 6px 0 #f0f0f0, 18px 6px 0 #f0f0f0, 21px 6px 0 #f0f0f0, 24px 6px 0 #f0f0f0, 27px 6px 0 #f0f0f0,
+        0 9px 0 #f0f0f0, 3px 9px 0 #f0f0f0, 6px 9px 0 #f0f0f0, 9px 9px 0 #f0f0f0, 12px 9px 0 #f0f0f0, 15px 9px 0 #f0f0f0, 18px 9px 0 #f0f0f0, 21px 9px 0 #f0f0f0, 24px 9px 0 #f0f0f0, 27px 9px 0 #f0f0f0,
+        0 12px 0 #f0f0f0, 3px 12px 0 #f0f0f0, 6px 12px 0 #f0f0f0, 9px 12px 0 #f0f0f0, 12px 12px 0 #f0f0f0, 15px 12px 0 #f0f0f0, 18px 12px 0 #f0f0f0, 21px 12px 0 #f0f0f0, 24px 12px 0 #f0f0f0, 27px 12px 0 #f0f0f0,
+        0 15px 0 #f0f0f0, 3px 15px 0 #f0f0f0, 6px 15px 0 #f0f0f0, 9px 15px 0 #f0f0f0, 12px 15px 0 #f0f0f0, 15px 15px 0 #f0f0f0, 18px 15px 0 #f0f0f0, 21px 15px 0 #f0f0f0, 24px 15px 0 #f0f0f0, 27px 15px 0 #f0f0f0,
+        3px 18px 0 #f0f0f0, 6px 18px 0 #f0f0f0, 9px 18px 0 #f0f0f0, 12px 18px 0 #f0f0f0, 15px 18px 0 #f0f0f0, 18px 18px 0 #f0f0f0, 21px 18px 0 #f0f0f0, 24px 18px 0 #f0f0f0,
+        6px 21px 0 #f0f0f0, 9px 21px 0 #f0f0f0, 12px 21px 0 #f0f0f0, 15px 21px 0 #f0f0f0, 18px 21px 0 #f0f0f0, 21px 21px 0 #f0f0f0;
 }
 
 // 像素化的眼睛：黑色小方块
 .sl-eye {
     position: absolute;
-    top: 4px;
-    width: 4px;
-    height: 8px;
+    top: 6px;
+    width: 6px;
+    height: 9px;
     background: #111;
 }
 
-.sl-eye-l { left: 4px; }
-.sl-eye-r { left: 14px; }
+.sl-eye-l { left: 6px; }
+.sl-eye-r { left: 18px; }
 
-// 黑斗篷：紧贴头底(不遮脸)，台阶颗粒边缘 + 随风飘动（风向右）
+// 黑斗篷 = 身体：比头宽、向下展开，台阶颗粒边缘 + 随风飘动
 .sl-cloak {
     position: absolute;
-    top: 36px;
+    top: 30px;
     left: 0;
-    width: 48px;
-    height: 28px;
+    width: 60px;
+    height: 36px;
     background: #101010;
-    clip-path: polygon(16px 0, 32px 0, 32px 4px, 36px 4px, 36px 8px, 40px 8px, 40px 12px, 44px 12px, 44px 16px, 48px 16px, 48px 28px, 0 28px, 0 16px, 4px 16px, 4px 12px, 8px 12px, 8px 8px, 12px 8px, 12px 4px, 16px 4px);
+    clip-path: polygon(18px 0, 42px 0, 42px 3px, 45px 3px, 45px 6px, 48px 6px, 48px 9px, 51px 9px, 51px 12px, 54px 12px, 54px 15px, 57px 15px, 57px 18px, 60px 18px, 60px 36px, 0 36px, 0 18px, 3px 18px, 3px 15px, 6px 15px, 6px 12px, 9px 12px, 9px 9px, 12px 9px, 12px 6px, 15px 6px, 15px 3px, 18px 3px);
     animation: sl-cloak-flap 1.2s steps(1, end) infinite;
 }
 
 @keyframes sl-cloak-flap {
-    0%, 100% { clip-path: polygon(16px 0, 32px 0, 32px 4px, 36px 4px, 36px 8px, 40px 8px, 40px 12px, 44px 12px, 44px 16px, 48px 16px, 48px 28px, 0 28px, 0 16px, 4px 16px, 4px 12px, 8px 12px, 8px 8px, 12px 8px, 12px 4px, 16px 4px); }
-    33%      { clip-path: polygon(16px 0, 32px 0, 32px 4px, 36px 4px, 36px 8px, 40px 8px, 40px 12px, 44px 12px, 44px 16px, 52px 20px, 44px 24px, 28px 28px, 0 28px, 0 16px, 4px 16px, 4px 12px, 8px 12px, 8px 8px, 12px 8px, 12px 4px, 16px 4px); }
-    66%      { clip-path: polygon(16px 0, 32px 0, 32px 4px, 36px 4px, 36px 8px, 40px 8px, 40px 12px, 44px 12px, 44px 16px, 48px 16px, 48px 28px, 24px 28px, 16px 20px, 12px 16px, 4px 16px, 4px 12px, 8px 12px, 8px 8px, 12px 8px, 12px 4px, 16px 4px); }
+    0%, 100% { clip-path: polygon(18px 0, 42px 0, 42px 3px, 45px 3px, 45px 6px, 48px 6px, 48px 9px, 51px 9px, 51px 12px, 54px 12px, 54px 15px, 57px 15px, 57px 18px, 60px 18px, 60px 36px, 0 36px, 0 18px, 3px 18px, 3px 15px, 6px 15px, 6px 12px, 9px 12px, 9px 9px, 12px 9px, 12px 6px, 15px 6px, 15px 3px, 18px 3px); }
+    33%      { clip-path: polygon(18px 0, 42px 0, 42px 3px, 45px 3px, 45px 6px, 48px 6px, 48px 9px, 51px 9px, 51px 12px, 54px 12px, 54px 15px, 57px 15px, 57px 18px, 60px 18px, 60px 24px, 52px 28px, 44px 33px, 40px 36px, 0 36px, 0 18px, 3px 18px, 3px 15px, 6px 15px, 6px 12px, 9px 12px, 9px 9px, 12px 9px, 12px 6px, 15px 6px, 15px 3px, 18px 3px); }
+    66%      { clip-path: polygon(18px 0, 42px 0, 42px 3px, 45px 3px, 45px 6px, 48px 6px, 48px 9px, 51px 9px, 51px 12px, 54px 12px, 54px 15px, 57px 15px, 57px 18px, 60px 18px, 60px 36px, 16px 36px, 12px 30px, 9px 24px, 6px 18px, 3px 18px, 3px 15px, 6px 15px, 6px 12px, 9px 12px, 9px 9px, 12px 9px, 12px 6px, 15px 6px, 15px 3px, 18px 3px); }
 }
 
-// 腿：短腿，紧贴斗篷底部、两条直线
+// 腿：短腿紧贴斗篷底，三帧飘动姿态下都保持被斗篷覆盖
 .sl-leg {
     position: absolute;
-    top: 64px;
-    width: 4px;
-    height: 22px;
+    top: 66px;
+    width: 6px;
+    height: 15px;
     background: #0b0b0b;
 }
 
-.sl-leg-l { left: 16px; }
-.sl-leg-r { left: 28px; }
+.sl-leg-l { left: 22px; }
+.sl-leg-r { left: 32px; }
 
 // 减动效偏好：云静止，但雨和斗篷照常飘动
 @media (prefers-reduced-motion: reduce) {
