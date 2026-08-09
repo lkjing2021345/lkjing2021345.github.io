@@ -326,3 +326,161 @@ html {
 .disqus-container:empty {
     display: none;
 }
+
+/* ============================================================
+   樱花花瓣 & 舒适度优化
+   ============================================================ */
+
+// =============================================
+// 14. 樱花花瓣画布 —— 固定在背景层，不拦截鼠标事件
+// =============================================
+#petal-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+// =============================================
+// 15. 平滑滚动 & 锚点偏移
+// =============================================
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+// =============================================
+// 16. 选中文字改为樱花粉（覆盖第 2 节的蓝色选中）
+// =============================================
+::selection {
+    color: #5a2333;
+    background: #ffb7c5;
+}
+
+[data-scheme="dark"] ::selection {
+    color: #fff;
+    background: #d94f6d;
+}
+
+// =============================================
+// 17. 键盘焦点可见性（无障碍）
+// =============================================
+:focus-visible {
+    outline: 2px solid #e88aa0;
+    outline-offset: 2px;
+}
+
+// =============================================
+// 18. 页面背景 —— 极淡的粉调渐变，与花瓣呼应
+// =============================================
+body {
+    background: linear-gradient(180deg, #faf5f8 0%, #f5f5fa 100%);
+}
+
+[data-scheme="dark"] body {
+    background: linear-gradient(180deg, #313135 0%, #303030 100%);
+}
+
+// =============================================
+// 19. 首页文章卡片 hover 上浮（不干扰 tile 卡片原有缩放）
+// =============================================
+.article-list article {
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.3s ease;
+}
+
+.article-list article:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-l2);
+}
+
+// =============================================
+// 20. 首页封面图 hover 轻微放大
+// =============================================
+.article-list article .article-image {
+    overflow: hidden;
+    border-top-left-radius: var(--card-border-radius);
+    border-top-right-radius: var(--card-border-radius);
+}
+
+.article-list article .article-image img {
+    transition: transform 0.5s ease;
+}
+
+.article-list article:hover .article-image img {
+    transform: scale(1.05);
+}
+
+// =============================================
+// 21. 暗色模式滚动条配色
+// =============================================
+[data-scheme="dark"] html ::-webkit-scrollbar-thumb {
+    background-color: #5a5a5f;
+}
+
+[data-scheme="dark"] html ::-webkit-scrollbar-thumb:hover {
+    background-color: #6e6e74;
+}
+
+// =============================================
+// 22. 返回顶部按钮
+// =============================================
+#back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--card-background);
+    box-shadow: var(--shadow-l2);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e88aa0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    z-index: 999;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+#back-to-top:hover {
+    transform: translateY(-3px);
+    background: #ffb7c5;
+    color: #5a2333;
+}
+
+// =============================================
+// 23. 标题换行更均衡
+// =============================================
+h1, h2, h3, h4 {
+    text-wrap: balance;
+}
+
+// =============================================
+// 24. 降低动态效果偏好
+// =============================================
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .article-list article,
+    .article-list article .article-image img,
+    #back-to-top {
+        transition: none !important;
+    }
+
+    .article-list article:hover,
+    .article-list article:hover .article-image img {
+        transform: none;
+    }
+}
