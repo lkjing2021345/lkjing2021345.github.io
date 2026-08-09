@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    custom.scss — 个性化样式覆盖
    此文件在主题 style.scss 最后被 @import，优先级最高
    ============================================================ */
@@ -538,7 +538,7 @@ h1, h2, h3, h4 {
 .sl-scene {
     position: relative;
     width: 280px;
-    height: 260px;
+    height: 290px;
 }
 
 // ---- 黑云（4px 小颗粒像素块，云宽 = 雨宽 88px）----
@@ -574,7 +574,7 @@ h1, h2, h3, h4 {
     left: calc(50% - 44px);
     top: 52px;
     width: 88px;
-    height: 174px;
+    height: 213px;
 }
 
 .sl-rain i {
@@ -592,7 +592,7 @@ h1, h2, h3, h4 {
     0%   { transform: translate(0, 0); opacity: 0; }
     8%   { opacity: 0.9; }
     90%  { opacity: 0.5; }
-    100% { transform: translate(20px, 170px); opacity: 0.15; }
+    100% { transform: translate(20px, 203px); opacity: 0.15; }
 }
 
 .sl-rain i:nth-child(1)  { left: 8px;  animation-delay: -0.05s; }
@@ -612,7 +612,7 @@ h1, h2, h3, h4 {
 .sl-ground {
     position: absolute;
     left: 50%;
-    top: 232px;
+    top: 241px;
     transform: translateX(-50%);
     width: 160px;
     height: 4px;
@@ -633,8 +633,8 @@ h1, h2, h3, h4 {
 // ---- 像素小人：大头短腿萝莉，3px 小颗粒拼块，头窄身宽 ----
 .sl-kid {
     position: absolute;
-    left: 50%;
-    top: 151px;
+    left: calc(50% + 20px);
+    top: 181px;
     width: 60px;
     height: 84px;
     margin-left: -30px;
@@ -688,7 +688,7 @@ h1, h2, h3, h4 {
 .sl-cloak {
     position: absolute;
     top: 30px;
-    left: 0;
+    left: 10px;
     width: 60px;
     height: 36px;
     background: #101010;
@@ -705,14 +705,14 @@ h1, h2, h3, h4 {
 // 腿：8px 宽短腿，居中贴斗篷底，三帧姿态下都被斗篷盖住
 .sl-leg {
     position: absolute;
-    top: 66px;
+    top: 46px;
     width: 8px;
     height: 15px;
     background: #0b0b0b;
 }
 
-.sl-leg-l { left: 21px; }
-.sl-leg-r { left: 31px; }
+.sl-leg-l { left: 22px; }
+.sl-leg-r { left: 32px; }
 
 // 减动效偏好：云静止，但雨和斗篷照常飘动
 @media (prefers-reduced-motion: reduce) {
