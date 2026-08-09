@@ -630,82 +630,95 @@ h1, h2, h3, h4 {
     margin-left: -22px;
 }
 
-// 猫耳：向上翘起的三角
-.sl-ear {
+// ---- 像素小人：大头短腿的萝莉比例，全身 4px 颗粒像素拼块 ----
+.sl-kid {
     position: absolute;
-    top: 0;
-    width: 12px;
-    height: 16px;
-    background: #0d0d0d;
-    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    left: 50%;
+    top: 148px;
+    width: 40px;
+    height: 92px;
+    margin-left: -20px;
 }
 
-.sl-ear-l { left: 2px; }
-.sl-ear-r { right: 2px; }
-
-// 头占全身约 1/4（萝莉/二头身比例，大头）
+// 头：黑色像素头（32x32），猫耳内嵌在头顶不超出范围
 .sl-hood {
     position: absolute;
-    top: 8px;
-    left: 6px;
-    width: 32px;
-    height: 24px;
+    left: 4px;
+    top: 0;
+    width: 4px;
+    height: 4px;
     background: #131313;
+    box-shadow:
+        8px 0 0 #131313, 12px 0 0 #131313, 24px 0 0 #131313, 28px 0 0 #131313,
+        8px 4px 0 #131313, 12px 4px 0 #131313, 24px 4px 0 #131313, 28px 4px 0 #131313,
+        8px 8px 0 #131313, 12px 8px 0 #131313, 16px 8px 0 #131313, 20px 8px 0 #131313, 24px 8px 0 #131313, 28px 8px 0 #131313,
+        4px 12px 0 #131313, 8px 12px 0 #131313, 12px 12px 0 #131313, 16px 12px 0 #131313, 20px 12px 0 #131313, 24px 12px 0 #131313, 28px 12px 0 #131313, 32px 12px 0 #131313,
+        4px 16px 0 #131313, 8px 16px 0 #131313, 12px 16px 0 #131313, 16px 16px 0 #131313, 20px 16px 0 #131313, 24px 16px 0 #131313, 28px 16px 0 #131313, 32px 16px 0 #131313,
+        0 20px 0 #131313, 4px 20px 0 #131313, 8px 20px 0 #131313, 12px 20px 0 #131313, 16px 20px 0 #131313, 20px 20px 0 #131313, 24px 20px 0 #131313, 28px 20px 0 #131313, 32px 20px 0 #131313, 36px 20px 0 #131313,
+        0 24px 0 #131313, 4px 24px 0 #131313, 8px 24px 0 #131313, 12px 24px 0 #131313, 16px 24px 0 #131313, 20px 24px 0 #131313, 24px 24px 0 #131313, 28px 24px 0 #131313, 32px 24px 0 #131313, 36px 24px 0 #131313,
+        0 28px 0 #131313, 4px 28px 0 #131313, 8px 28px 0 #131313, 12px 28px 0 #131313, 16px 28px 0 #131313, 20px 28px 0 #131313, 24px 28px 0 #131313, 28px 28px 0 #131313, 32px 28px 0 #131313, 36px 28px 0 #131313;
 }
 
-// 白色的脸
+// 圆形的白色像素脸（24x24，像素圆）
 .sl-face {
     position: absolute;
-    top: 12px;
-    left: 10px;
-    width: 24px;
-    height: 14px;
+    left: 8px;
+    top: 4px;
+    width: 4px;
+    height: 4px;
     background: #f0f0f0;
+    box-shadow:
+        8px 0 0 #f0f0f0, 12px 0 0 #f0f0f0,
+        4px 4px 0 #f0f0f0, 8px 4px 0 #f0f0f0, 12px 4px 0 #f0f0f0, 16px 4px 0 #f0f0f0,
+        0 8px 0 #f0f0f0, 4px 8px 0 #f0f0f0, 8px 8px 0 #f0f0f0, 12px 8px 0 #f0f0f0, 16px 8px 0 #f0f0f0, 20px 8px 0 #f0f0f0,
+        0 12px 0 #f0f0f0, 4px 12px 0 #f0f0f0, 8px 12px 0 #f0f0f0, 12px 12px 0 #f0f0f0, 16px 12px 0 #f0f0f0, 20px 12px 0 #f0f0f0,
+        4px 16px 0 #f0f0f0, 8px 16px 0 #f0f0f0, 12px 16px 0 #f0f0f0, 16px 16px 0 #f0f0f0,
+        8px 20px 0 #f0f0f0, 12px 20px 0 #f0f0f0;
 }
 
-// 像素化的眼睛：黑色大方块
+// 像素化的眼睛：黑色小方块
 .sl-eye {
     position: absolute;
     top: 4px;
-    width: 6px;
-    height: 9px;
+    width: 4px;
+    height: 8px;
     background: #111;
 }
 
 .sl-eye-l { left: 4px; }
-.sl-eye-r { right: 4px; }
+.sl-eye-r { left: 14px; }
 
-// 黑斗篷：被风吹起（风向右，与斜雨方向一致），像素级帧动画
+// 黑斗篷：台阶颗粒边缘 + 随风飘动（风向右，与斜雨同向）
 .sl-cloak {
     position: absolute;
-    top: 30px;
+    top: 24px;
     left: 0;
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 32px;
     background: #101010;
-    clip-path: polygon(12px 0, 32px 0, 44px 44px, 0 44px);
+    clip-path: polygon(12px 0, 28px 0, 28px 4px, 32px 4px, 32px 8px, 36px 8px, 36px 16px, 40px 16px, 40px 32px, 0 32px, 0 16px, 4px 16px, 4px 8px, 8px 8px, 8px 4px, 12px 4px);
     animation: sl-cloak-flap 1.2s steps(1, end) infinite;
 }
 
 @keyframes sl-cloak-flap {
-    0%, 100% { clip-path: polygon(12px 0, 32px 0, 44px 44px, 0 44px); }
-    33%      { clip-path: polygon(12px 0, 32px 0, 54px 36px, 2px 46px); }
-    66%      { clip-path: polygon(12px 0, 32px 0, 40px 48px, 6px 40px); }
+    0%, 100% { clip-path: polygon(12px 0, 28px 0, 28px 4px, 32px 4px, 32px 8px, 36px 8px, 36px 16px, 40px 16px, 40px 32px, 0 32px, 0 16px, 4px 16px, 4px 8px, 8px 8px, 8px 4px, 12px 4px); }
+    33%      { clip-path: polygon(12px 0, 28px 0, 28px 4px, 32px 4px, 32px 8px, 36px 8px, 36px 16px, 40px 16px, 44px 24px, 36px 28px, 20px 32px, 0 32px, 0 16px, 4px 16px, 4px 8px, 8px 8px, 8px 4px, 12px 4px); }
+    66%      { clip-path: polygon(12px 0, 28px 0, 28px 4px, 32px 4px, 32px 8px, 36px 8px, 36px 16px, 40px 16px, 40px 32px, 20px 32px, 12px 24px, 8px 16px, 4px 16px, 4px 8px, 8px 8px, 8px 4px, 12px 4px); }
 }
 
-// 腿：短腿（约占全身 1/5），从斗篷下伸出两条直线
+// 腿：短腿，斗篷下两条直线
 .sl-leg {
     position: absolute;
-    top: 73px;
+    top: 60px;
     width: 4px;
-    height: 21px;
+    height: 24px;
     background: #0b0b0b;
 }
 
-.sl-leg-l { left: 13px; }
-.sl-leg-r { right: 13px; }
+.sl-leg-l { left: 12px; }
+.sl-leg-r { left: 24px; }
 
-// 减动效偏好：云/斗篷静止，但雨照常下落
+// 减动效偏好：云静止，但雨和斗篷照常飘动
 @media (prefers-reduced-motion: reduce) {
     #site-loading {
         backdrop-filter: blur(0);
@@ -713,8 +726,7 @@ h1, h2, h3, h4 {
         transition: opacity 0.3s ease, visibility 0.3s ease;
     }
 
-    .sl-cloud,
-    .sl-cloak {
+    .sl-cloud {
         animation: none;
     }
 }
