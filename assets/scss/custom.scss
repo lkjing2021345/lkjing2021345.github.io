@@ -484,3 +484,27 @@ h1, h2, h3, h4 {
         transform: none;
     }
 }
+
+// =============================================
+// 25. 页面入场动画（CSS 淡入上浮，缓解页面切换僵硬感）
+// =============================================
+@keyframes page-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.main-container {
+    animation: page-fade-in 0.35s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .main-container {
+        animation: none;
+    }
+}
