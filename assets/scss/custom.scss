@@ -661,23 +661,15 @@ h1, h2, h3, h4 {
         6px 27px 0 #131313, 9px 27px 0 #131313, 12px 27px 0 #131313, 15px 27px 0 #131313, 18px 27px 0 #131313, 21px 27px 0 #131313, 24px 27px 0 #131313, 27px 27px 0 #131313, 30px 27px 0 #131313, 33px 27px 0 #131313, 36px 27px 0 #131313, 39px 27px 0 #131313;
 }
 
-// 圆形的白色像素脸（30x24，像素圆）
+// 圆形的白色像素脸（30x24）：内部纯白无网格，仅边缘呈台阶像素感
 .sl-face {
     position: absolute;
     left: 15px;
     top: 3px;
-    width: 3px;
-    height: 3px;
-    background: #f0f0f0;
-    box-shadow:
-        6px 0 0 #f0f0f0, 9px 0 0 #f0f0f0, 12px 0 0 #f0f0f0, 15px 0 0 #f0f0f0, 18px 0 0 #f0f0f0, 21px 0 0 #f0f0f0,
-        3px 3px 0 #f0f0f0, 6px 3px 0 #f0f0f0, 9px 3px 0 #f0f0f0, 12px 3px 0 #f0f0f0, 15px 3px 0 #f0f0f0, 18px 3px 0 #f0f0f0, 21px 3px 0 #f0f0f0, 24px 3px 0 #f0f0f0,
-        0 6px 0 #f0f0f0, 3px 6px 0 #f0f0f0, 6px 6px 0 #f0f0f0, 9px 6px 0 #f0f0f0, 12px 6px 0 #f0f0f0, 15px 6px 0 #f0f0f0, 18px 6px 0 #f0f0f0, 21px 6px 0 #f0f0f0, 24px 6px 0 #f0f0f0, 27px 6px 0 #f0f0f0,
-        0 9px 0 #f0f0f0, 3px 9px 0 #f0f0f0, 6px 9px 0 #f0f0f0, 9px 9px 0 #f0f0f0, 12px 9px 0 #f0f0f0, 15px 9px 0 #f0f0f0, 18px 9px 0 #f0f0f0, 21px 9px 0 #f0f0f0, 24px 9px 0 #f0f0f0, 27px 9px 0 #f0f0f0,
-        0 12px 0 #f0f0f0, 3px 12px 0 #f0f0f0, 6px 12px 0 #f0f0f0, 9px 12px 0 #f0f0f0, 12px 12px 0 #f0f0f0, 15px 12px 0 #f0f0f0, 18px 12px 0 #f0f0f0, 21px 12px 0 #f0f0f0, 24px 12px 0 #f0f0f0, 27px 12px 0 #f0f0f0,
-        0 15px 0 #f0f0f0, 3px 15px 0 #f0f0f0, 6px 15px 0 #f0f0f0, 9px 15px 0 #f0f0f0, 12px 15px 0 #f0f0f0, 15px 15px 0 #f0f0f0, 18px 15px 0 #f0f0f0, 21px 15px 0 #f0f0f0, 24px 15px 0 #f0f0f0, 27px 15px 0 #f0f0f0,
-        3px 18px 0 #f0f0f0, 6px 18px 0 #f0f0f0, 9px 18px 0 #f0f0f0, 12px 18px 0 #f0f0f0, 15px 18px 0 #f0f0f0, 18px 18px 0 #f0f0f0, 21px 18px 0 #f0f0f0, 24px 18px 0 #f0f0f0,
-        6px 21px 0 #f0f0f0, 9px 21px 0 #f0f0f0, 12px 21px 0 #f0f0f0, 15px 21px 0 #f0f0f0, 18px 21px 0 #f0f0f0, 21px 21px 0 #f0f0f0;
+    width: 30px;
+    height: 24px;
+    background: #ffffff;
+    clip-path: polygon(6px 0, 24px 0, 24px 3px, 27px 3px, 27px 6px, 30px 6px, 30px 21px, 27px 21px, 27px 24px, 6px 24px, 6px 21px, 3px 21px, 3px 18px, 0px 18px, 0px 6px, 3px 6px, 3px 3px, 6px 3px);
 }
 
 // 像素化的眼睛：黑色小方块
@@ -696,7 +688,7 @@ h1, h2, h3, h4 {
 .sl-cloak {
     position: absolute;
     top: 30px;
-    left: 0;
+    left: 3px;
     width: 60px;
     height: 36px;
     background: #101010;
@@ -719,8 +711,8 @@ h1, h2, h3, h4 {
     background: #0b0b0b;
 }
 
-.sl-leg-l { left: 22px; }
-.sl-leg-r { left: 32px; }
+.sl-leg-l { left: 25px; }
+.sl-leg-r { left: 35px; }
 
 // 减动效偏好：云静止，但雨和斗篷照常飘动
 @media (prefers-reduced-motion: reduce) {
