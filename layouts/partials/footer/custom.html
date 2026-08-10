@@ -11,3 +11,47 @@
 <button id="back-to-top" type="button" aria-label="回到顶部" title="回到顶部">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg>
 </button>
+
+<!-- Live2D 看板娘：跟随光标 + 点击说话 -->
+<div id="oml2d"></div>
+<script src="https://cdn.jsdelivr.net/npm/oh-my-live2d@0.19.3/dist/index.min.js" defer></script>
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+        const loader = window.loadOml2d || (window.OML2D && window.OML2D.loadOml2d);
+        if (typeof loader !== 'function') return;
+        const words = [
+            '你好呀~',
+            '欢迎来到 Shimmer 的博客',
+            '有什么想了解的可以问我哦',
+            '喵~ 别点我啦'
+        ];
+        let wordIndex = 0;
+        try {
+            const inst = loader({
+                models: [{
+                    path: 'https://cdn.jsdelivr.net/npm/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json',
+                    scale: 0.14,
+                    position: [60, 90]
+                }],
+                parentElement: document.getElementById('oml2d'),
+                canvasSize: { width: 320, height: 460 },
+                mobileDisplay: { enable: true, size: 190 },
+                mouse: { enable: true },
+                transitionTime: 800
+            });
+            window.oml2d = inst;
+            // 点击看板娘 → 随机说一句话
+            const container = document.getElementById('oml2d');
+            if (container) {
+                container.addEventListener('click', function () {
+                    const msg = words[wordIndex++ % words.length];
+                    if (window.oml2d && window.oml2d.tipsMessage) {
+                        window.oml2d.tipsMessage(msg, 4000);
+                    }
+                });
+            }
+        } catch (e) {
+            console.error('Live2D init failed:', e);
+        }
+    });
+</script>
