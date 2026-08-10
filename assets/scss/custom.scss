@@ -12,7 +12,7 @@
     --tag-border-radius: 8px;
     --section-separation: 40px;
     --article-font-size: 2.0rem;
-    --article-line-height: 5.0;
+    --article-line-height: 1.8;
     --code-background-color: #e6e6e6;
     --code-text-color: #91d0fa;
 
@@ -553,17 +553,17 @@ h1, h2, h3, h4 {
 .article-content h4,
 .article-content h5 { font-size: 2.0rem; }
 
-// 标题与正文间距（略大于正文行距，但不过分）
+// 标题与正文间距
 .article-content h2 {
-    margin-top: 100px;
-    margin-bottom: 0.3em;
+    margin-top: 18px;
+    margin-bottom: 15px;
 }
 
 .article-content h3,
 .article-content h4,
 .article-content h5 {
-    margin-top: 85px;
-    margin-bottom: 0.3em;
+    margin-top: 16px;
+    margin-bottom: 12px;
 }
 
 [data-scheme="dark"] .article-content h2,
