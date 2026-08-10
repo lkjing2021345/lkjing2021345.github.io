@@ -12,7 +12,7 @@
     --tag-border-radius: 8px;
     --section-separation: 40px;
     --article-font-size: 2.0rem;
-    --article-line-height: 10.8;
+    --article-line-height: 5.0;
     --code-background-color: #e6e6e6;
     --code-text-color: #91d0fa;
 
@@ -534,6 +534,11 @@ h1, h2, h3, h4 {
 }
 
 // 正文标题：黑体加粗 + 行首黑色粗线 + 标题字号（28/23/20px 层级）
+.article-content {
+    font-size: var(--article-font-size);
+    line-height: var(--article-line-height);
+}
+
 .article-content h2,
 .article-content h3,
 .article-content h4,
@@ -548,16 +553,16 @@ h1, h2, h3, h4 {
 .article-content h4,
 .article-content h5 { font-size: 2.0rem; }
 
-// 标题与正文间距收紧（行距已够大，标题间距不用太大）
+// 标题与正文间距（略大于正文行距，但不过分）
 .article-content h2 {
-    margin-top: 235px;
+    margin-top: 100px;
     margin-bottom: 0.3em;
 }
 
 .article-content h3,
 .article-content h4,
 .article-content h5 {
-    margin-top: 215px;
+    margin-top: 85px;
     margin-bottom: 0.3em;
 }
 
