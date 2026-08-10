@@ -1,0 +1,56 @@
+{{- $ThemeVersion := "4.0.3" -}}
+<footer class="site-footer">
+    {{- /* 运行时间：从建站日起算，JS 实时计算 */ -}}
+    <section class="uptime">
+        <span id="site-uptime">该博客站已稳定运行…</span>
+    </section>
+
+    <section class="copyright">
+        &copy; 
+        {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) }}
+            {{ .Site.Params.footer.since }} - 
+        {{ end }}
+        {{ now.Format "2006" }} {{ default .Site.Title .Site.Copyright }}
+    </section>
+
+    {{- /* 文章统计：篇数 + 字数（构建时计算） */ -}}
+    {{- $posts := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
+    {{- $postCount := len $posts -}}
+    {{- $words := 0 -}}
+    {{- range $posts -}}{{- $words = add $words .WordCount -}}{{- end -}}
+    {{- $wan := div $words 10000 -}}
+    {{- $qian := div (mod $words 10000) 1000 -}}
+    <section class="stats">
+        {{ if ge $words 10000 }}
+            共计 {{ $postCount }} 篇博客，{{ $wan }} 万 {{ $qian }} 千字
+        {{ else }}
+            共计 {{ $postCount }} 篇博客，{{ div $words 1000 }} 千字
+        {{ end }}
+    </section>
+    
+    <section class="powerby">
+        {{ with .Site.Params.footer.customText }}
+            {{ . | safeHTML }} <br/>
+        {{ end }}
+
+        {{- $Generator := `<a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>` -}}
+        {{- $Theme := printf `<b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="%s">Stack</a></b>` $ThemeVersion -}}
+        {{- $DesignedBy := `<a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>` -}}
+
+        {{ T "footer.builtWith" (dict "Generator" $Generator) | safeHTML }} <br />
+        {{ T "footer.designedBy" (dict "Theme" $Theme "DesignedBy" $DesignedBy) | safeHTML }}
+    </section>
+</footer>
+
+<script>
+    (function () {
+        var start = new Date('2026-07-30T00:00:00+08:00');
+        var now = new Date();
+        var diffDays = Math.floor((now - start) / 86400000);
+        var years = Math.floor(diffDays / 365);
+        var months = Math.floor((diffDays % 365) / 30);
+        var days = diffDays % 365 % 30;
+        var el = document.getElementById('site-uptime');
+        if (el) el.textContent = '该博客站已稳定运行 ' + years + ' 年 ' + months + ' 月 ' + days + ' 日';
+    })();
+</script>
