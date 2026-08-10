@@ -95,6 +95,14 @@ code {
     }
 }
 
+// 单页(文章页)封面图：限高裁切，避免大图撑爆
+.article-page .main-article .article-image img {
+    width: 100%;
+    height: var(--article-image-height);
+    object-fit: cover;
+    border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
+}
+
 // =============================================
 // 6. 代码块样式
 // =============================================
