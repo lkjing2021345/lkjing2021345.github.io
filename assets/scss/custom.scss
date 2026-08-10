@@ -539,6 +539,7 @@ h1, h2, h3, h4 {
     line-height: var(--article-line-height);
 }
 
+.article-content h1,
 .article-content h2,
 .article-content h3,
 .article-content h4,
@@ -566,6 +567,7 @@ h1, h2, h3, h4 {
     margin-bottom: 12px;
 }
 
+[data-scheme="dark"] .article-content h1,
 [data-scheme="dark"] .article-content h2,
 [data-scheme="dark"] .article-content h3,
 [data-scheme="dark"] .article-content h4,
