@@ -12,12 +12,12 @@
     --tag-border-radius: 8px;
     --section-separation: 40px;
     --article-font-size: 1.8rem;
-    --code-background-color: #f8f8f8;
-    --code-text-color: #e96900;
+    --code-background-color: #e6e6e6;
+    --code-text-color: #91d0fa;
 
     &[data-scheme="dark"] {
-        --code-background-color: #ff6d1b17;
-        --code-text-color: #e96900;
+        --code-background-color: #3a3a3a;
+        --code-text-color: #91d0fa;
     }
 }
 
