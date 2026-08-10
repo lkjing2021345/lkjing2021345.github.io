@@ -12,13 +12,15 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
 
 
-<link rel="stylesheet" href="/scss/style.min.1d6a8ee20300ec9b14190a17901a552fc84c29cd8809cb03dafc8086edb4edef.css"><meta property='og:title' content="Tags">
+<link rel="stylesheet" href="/scss/style.min.dad07918a172c9065a4df3da68be9d97dd466a71993953dc6fdea9717ccec3b3.css"><meta property='og:title' content="Tags">
 <meta property='og:description' content="网络安全爱好者">
 <meta property='og:url' content='http://localhost:1313/tags/'>
 <meta property='og:site_name' content='Shimmer の blog'>
 <meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-08-09T14:00:00&#43;08:00 '/>
 <meta name="twitter:title" content="Tags">
 <meta name="twitter:description" content="网络安全爱好者"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/tags/index.xml">
+    <link rel="shortcut icon" href="/img/avatar.jpg" />
+
 <div id="site-loading" aria-hidden="true">
     <div class="sl-scene">
         <div class="sl-cloud"></div>
@@ -454,11 +456,18 @@
 </article>
             
         </section>
-    <footer class="site-footer">
+    <footer class="site-footer"><section class="uptime">
+        <span id="site-uptime">该博客站已稳定运行…</span>
+    </section>
+
     <section class="copyright">
         &copy; 
         
         2026 Shimmer の blog
+    </section><section class="stats">
+        
+            共计 3 篇博客，1 千字
+        
     </section>
     
     <section class="powerby">
@@ -467,11 +476,24 @@
     </section>
 </footer>
 
+<script>
+    (function () {
+        var start = new Date('2026-07-30T00:00:00+08:00');
+        var now = new Date();
+        var diffDays = Math.floor((now - start) / 86400000);
+        var years = Math.floor(diffDays / 365);
+        var months = Math.floor((diffDays % 365) / 30);
+        var days = diffDays % 365 % 30;
+        var el = document.getElementById('site-uptime');
+        if (el) el.textContent = '该博客站已稳定运行 ' + years + ' 年 ' + months + ' 月 ' + days + ' 日';
+    })();
+</script>
+
 
             </main>
         </div>
         
-<script type="text/javascript" src="/ts/main.d5d6f73cee343b7a72fcbe91baf0808b23e8089c17f7eb58785ab3469308478c.js" defer></script><script type="text/javascript" src="/ts/custom.ee6ff17892bfb10489e12d8e4997db52358486083780ffa9c72e05c10e6395dd.js" defer></script>
+<script type="text/javascript" src="/ts/main.7fb81dfd22336a4af48b33b71b6acef253ec7dcc7cce2bcd76d76894e61b2b54.js" defer></script><script type="text/javascript" src="/ts/custom.40f1251266845f22c4d7185d8234918f1d2103a517f19025ac40b0b053c2dc0e.js" defer></script>
 <script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css" crossorigin="anonymous" />
 <script>
