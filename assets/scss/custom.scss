@@ -500,9 +500,51 @@ h1, h2, h3, h4 {
 }
 
 // =============================================
-// 24. 降低动态效果偏好
+// 24. 右侧目录(TOC)样式：快速跳转
 // =============================================
-@media (prefers-reduced-motion: reduce) {
+.widget--toc .toc-nav {
+    max-height: 70vh;
+    overflow-y: auto;
+
+    ul {
+        list-style: none;
+        padding-left: 12px;
+        margin: 0;
+    }
+
+    & > ul {
+        padding-left: 0;
+    }
+
+    li {
+        margin: 4px 0;
+    }
+
+    a {
+        display: block;
+        color: var(--card-text-color-secondary);
+        font-size: 1.4rem;
+        line-height: 1.6;
+        padding: 2px 6px;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+
+        &:hover {
+            color: var(--accent-color);
+            background: rgba(127, 127, 127, 0.08);
+        }
+
+        &.active {
+            color: var(--accent-color);
+            font-weight: 700;
+            background: rgba(127, 127, 127, 0.1);
+        }
+    }
+}
+
+// =============================================
+// 25. 降低动态效果偏好
+// =============================================@media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
     }
