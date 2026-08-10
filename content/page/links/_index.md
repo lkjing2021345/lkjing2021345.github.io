@@ -16,7 +16,7 @@ links:
   - title: 法王の小屋
     description: 这是 法王 的个人博客，一个记录学习成长的空间，希望通过文字记录下每一个有意义的瞬间，也愿意将我的学习心得与你分享。保持激情，保持热爱！
     website: https://lawking.top
-    image: https://lawking.top/wp-content/uploads/2025/01/cropped - 可爱头像.jpg
+    image: https://lawking.top/wp-content/uploads/2025/01/cropped-%E5%8F%AF%E7%88%B1%E5%A4%B4%E5%83%8F.jpg
 menu:
     main: 
         weight: 4
