@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on Shimmer の blog</title>
-        <link>http://localhost:63959/page/</link>
+        <link>http://localhost:1313/page/</link>
         <description>Recent content in Pages on Shimmer の blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Thu, 30 Jul 2026 14:15:23 +0800</lastBuildDate><atom:link href="http://localhost:63959/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 30 Jul 2026 14:15:23 +0800</lastBuildDate><atom:link href="http://localhost:1313/page/index.xml" rel="self" type="application/rss+xml" /><item>
             <title>关于我</title>
-            <link>http://localhost:63959/page/about/</link>
+            <link>http://localhost:1313/page/about/</link>
             <pubDate>Thu, 30 Jul 2026 14:15:23 +0800</pubDate>
-            <guid>http://localhost:63959/page/about/</guid>
+            <guid>http://localhost:1313/page/about/</guid>
             <description>&lt;h2 id=&#34;关于我&#34;&gt;关于我&#xA;&lt;/h2&gt;&lt;p&gt;Hello，我是 Shimmer，一名网络安全爱好者。欢迎来到我的博客！&lt;/p&gt;&#xA;&lt;h3 id=&#34;社交账号&#34;&gt;社交账号&#xA;&lt;/h3&gt;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;平台&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;链接&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;🐙 GitHub&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/lkjing2021345&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;lkjing2021345&lt;/a&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;📺 Bilibili&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://space.bilibili.com/565536792&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;我的B站空间&lt;/a&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;欢迎来找我玩！&lt;/p&gt;&#xA;</description>
         </item><item>
             <title>友情链接</title>
-            <link>http://localhost:63959/page/links/</link>
+            <link>http://localhost:1313/page/links/</link>
             <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-            <guid>http://localhost:63959/page/links/</guid>
+            <guid>http://localhost:1313/page/links/</guid>
             <description>&lt;p&gt;这里放一些我常逛的网站和朋友们的博客。欢迎交换友链～&lt;/p&gt;&#xA;</description>
         </item><item>
             <title>归档</title>
-            <link>http://localhost:63959/page/archives/</link>
+            <link>http://localhost:1313/page/archives/</link>
             <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-            <guid>http://localhost:63959/page/archives/</guid>
+            <guid>http://localhost:1313/page/archives/</guid>
             <description></description>
         </item><item>
             <title>搜索</title>
-            <link>http://localhost:63959/page/search/</link>
+            <link>http://localhost:1313/page/search/</link>
             <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-            <guid>http://localhost:63959/page/search/</guid>
+            <guid>http://localhost:1313/page/search/</guid>
             <description></description>
         </item></channel>
 </rss>
