@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
 
 
-<link rel="stylesheet" href="/scss/style.min.3b34e946a476d2a25bbebdf43b03bdc4282bc8203aa906a635ab48a0e0cdae49.css"><meta property='og:title' content="关于我">
+<link rel="stylesheet" href="/scss/style.min.1d6a8ee20300ec9b14190a17901a552fc84c29cd8809cb03dafc8086edb4edef.css"><meta property='og:title' content="关于我">
 <meta property='og:description' content="关于我 Hello，我是 Shimmer，一名网络安全爱好者。欢迎来到我的博客！\n社交账号 平台 链接 🐙 GitHub lkjing2021345 📺 Bilibili 我的B站空间 欢迎来找我玩！\n">
 <meta property='og:url' content='http://localhost:1313/about/'>
 <meta property='og:site_name' content='Shimmer の blog'>
@@ -121,6 +121,28 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
 </svg>
 
 
@@ -374,6 +396,38 @@
 
 
     
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const elementsToRender = [".main-article", ".widget--toc"];
+
+        elementsToRender.forEach(selector => {
+            const element = document.querySelector(selector);
+            if (element) {
+                renderMathInElement(element, {
+                    delimiters: [
+                        { left: "$$", right: "$$", display: true },
+                        { left: "$", right: "$", display: false },
+                        { left: "\\(", right: "\\)", display: false },
+                        { left: "\\[", right: "\\]", display: true }
+                    ],
+                    ignoredClasses: ["gist"]
+                });
+            }
+        });
+    });
+</script>
+    
 </article>
 
     
@@ -500,6 +554,50 @@
 <button id="back-to-top" type="button" aria-label="回到顶部" title="回到顶部">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg>
 </button>
+
+
+<div id="oml2d"></div>
+<script src="https://cdn.jsdelivr.net/npm/oh-my-live2d@0.19.3/dist/index.min.js" defer></script>
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+        const loader = window.loadOml2d || (window.OML2D && window.OML2D.loadOml2d);
+        if (typeof loader !== 'function') return;
+        const words = [
+            '你好呀~',
+            '欢迎来到 Shimmer 的博客',
+            '有什么想了解的可以问我哦',
+            '喵~ 别点我啦'
+        ];
+        let wordIndex = 0;
+        try {
+            const inst = loader({
+                models: [{
+                    path: 'https://cdn.jsdelivr.net/npm/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json',
+                    scale: 0.14,
+                    position: [60, 90]
+                }],
+                parentElement: document.getElementById('oml2d'),
+                canvasSize: { width: 320, height: 460 },
+                mobileDisplay: { enable: true, size: 190 },
+                mouse: { enable: true },
+                transitionTime: 800
+            });
+            window.oml2d = inst;
+            
+            const container = document.getElementById('oml2d');
+            if (container) {
+                container.addEventListener('click', function () {
+                    const msg = words[wordIndex++ % words.length];
+                    if (window.oml2d && window.oml2d.tipsMessage) {
+                        window.oml2d.tipsMessage(msg, 4000);
+                    }
+                });
+            }
+        } catch (e) {
+            console.error('Live2D init failed:', e);
+        }
+    });
+</script>
 
 
     </body>
