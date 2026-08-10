@@ -156,12 +156,12 @@ code {
     content: '';
     display: block;
     background: url(/code-header.svg);
-    height: 32px;
+    height: 38px;
     width: 100%;
-    background-size: 57px;
+    background-size: 130px;
     background-repeat: no-repeat;
-    margin-bottom: 5px;
-    background-position: -1px 2px;
+    margin-bottom: 4px;
+    background-position: 10px 8px;
 }
 
 // 代码复制按钮
@@ -171,25 +171,23 @@ code {
     right: 18px;
     border-radius: 12px;
     opacity: 1;
-    color: #ffffffad;
-    background: none;
+    color: #555;
+    background: rgba(255, 255, 255, 0.6);
     border: none;
-    padding: 0;
-    font-weight: 500;
+    padding: 2px 8px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    cursor: pointer;
 }
 
+[data-scheme="dark"] .article-content .copyCodeButton {
+    color: #ddd;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+// 语言标签不再显示
 .article-content .languageCodeButton {
-    position: absolute;
-    border: none;
-    top: 9px;
-    right: 69px;
-    border-radius: 12px;
-    opacity: 1;
-    padding: 0 5px;
-    background: none;
-    color: #ffffffad;
-    font-family: lato, sans-serif;
-    font-size: 1.5rem;
+    display: none !important;
 }
 
 // =============================================

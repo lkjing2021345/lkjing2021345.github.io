@@ -31,14 +31,6 @@ highlights.forEach(highlight => {
                 console.log('Copy failed', err);
             });
     });
-
-    // 语言标签
-    if (lang && !highlight.querySelector('.languageCodeButton')) {
-        const languageButton = document.createElement('button');
-        languageButton.innerHTML = lang.toUpperCase() + '&nbsp;&nbsp;';
-        languageButton.classList.add('languageCodeButton');
-        highlight.appendChild(languageButton);
-    }
 });
 
 // ============================================================
