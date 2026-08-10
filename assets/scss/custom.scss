@@ -482,6 +482,23 @@ h1, h2, h3, h4 {
     text-wrap: balance;
 }
 
+// 正文标题：黑体加粗 + 行首黑色粗线
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5 {
+    font-weight: 700;
+    border-left: 4px solid #000;
+    padding-left: 12px;
+}
+
+[data-scheme="dark"] .article-content h2,
+[data-scheme="dark"] .article-content h3,
+[data-scheme="dark"] .article-content h4,
+[data-scheme="dark"] .article-content h5 {
+    border-left-color: #fff;
+}
+
 // =============================================
 // 24. 降低动态效果偏好
 // =============================================
