@@ -18,6 +18,7 @@ theme = "stack"
   [params.article]
     toc = true
     readingTime = true
+    math = true
 
   [params.widgets]
     homepage = [
