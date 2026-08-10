@@ -146,9 +146,16 @@ code {
     background-color: #fff9f3;
 }
 
-[data-scheme="light"] .chroma {
-    color: #ff6f00;
-    background-color: #fff9f3cc;
+// 代码块整体统一橙色背景（容器/行号/代码行全部一致）
+[data-scheme="light"] .article-content .highlight,
+[data-scheme="light"] .article-content .highlight .chroma,
+[data-scheme="light"] .article-content .highlight pre,
+[data-scheme="light"] .article-content .highlight code {
+    background-color: #fff9f3;
+}
+
+[data-scheme="light"] .article-content .highlight {
+    color: #444;
 }
 
 // macOS 风格代码块顶部装饰条
