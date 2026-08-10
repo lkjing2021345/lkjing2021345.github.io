@@ -85,3 +85,11 @@ theme = "stack"
     [menu.social.params]
         icon = "brand-bilibili"
         newTab = true
+
+[[menu.social]]
+    identifier = "rss"
+    name = "RSS"
+    url = "/index.xml"
+    [menu.social.params]
+        icon = "rss"
+        newTab = true
