@@ -511,16 +511,16 @@ h1, h2, h3, h4 {
     animation: page-fade-in 0.35s ease-out;
 }
 
-// Live2D 看板娘：右下角悬浮（库内部用 #oml2d-stage 装 canvas）
+// Live2D 看板娘：左下角悬浮（库内部用 #oml2d-stage 装 canvas）
 #oml2d {
     pointer-events: none;
 }
 
 #oml2d-stage {
     position: fixed !important;
-    right: 20px !important;
+    left: 20px !important;
     bottom: 90px !important;
-    left: auto !important;
+    right: auto !important;
     top: auto !important;
     z-index: 998;
 }
@@ -531,7 +531,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 767px) {
     #oml2d-stage {
-        right: 4px !important;
+        left: 4px !important;
         bottom: 70px !important;
     }
 }
