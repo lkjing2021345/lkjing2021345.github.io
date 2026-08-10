@@ -178,16 +178,24 @@ code {
     background-color: #fff9f3;
 }
 
-// 代码块整体统一橙色背景（容器/行号/代码行全部一致）
+// 代码块整体统一橙色背景（容器/行号/代码行全部一致，!important 压过主题规则）
 [data-scheme="light"] .article-content .highlight,
 [data-scheme="light"] .article-content .highlight .chroma,
 [data-scheme="light"] .article-content .highlight pre,
-[data-scheme="light"] .article-content .highlight code {
-    background-color: #fff9f3;
+[data-scheme="light"] .article-content .highlight pre.chroma,
+[data-scheme="light"] .article-content .highlight code,
+[data-scheme="light"] .article-content .highlight .lntable,
+[data-scheme="light"] .article-content .highlight .lntd,
+[data-scheme="light"] .article-content .highlight .lntd pre {
+    background-color: #fff9f3 !important;
 }
 
 [data-scheme="light"] .article-content .highlight {
-    color: #444;
+    color: #444 !important;
+}
+
+[data-scheme="light"] .article-content .highlight .chroma {
+    color: #444 !important;
 }
 
 // macOS 风格代码块顶部装饰条
