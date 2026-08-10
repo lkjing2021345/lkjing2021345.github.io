@@ -203,17 +203,17 @@ code {
     color: #444 !important;
 }
 
-// macOS 风格代码块顶部装饰条
+// macOS 风格代码块顶部装饰条：红黄绿三圆点（纯 CSS 绘制，不依赖外部文件）
 .article-content .highlight:before {
     content: '';
     display: block;
-    background: url(/code-header.svg);
-    height: 38px;
-    width: 100%;
-    background-size: 130px;
-    background-repeat: no-repeat;
+    height: 34px;
     margin-bottom: 4px;
-    background-position: 10px 8px;
+    background:
+        radial-gradient(circle at 16px 16px, #ff5f57 0 7px, transparent 8px),
+        radial-gradient(circle at 40px 16px, #febc2e 0 7px, transparent 8px),
+        radial-gradient(circle at 64px 16px, #28c840 0 7px, transparent 8px);
+    background-repeat: no-repeat;
 }
 
 // 代码复制按钮

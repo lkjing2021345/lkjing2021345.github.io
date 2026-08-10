@@ -2,8 +2,8 @@
 // 注意：主题自带 copyCodeButton，这里用自定义的按钮覆盖
 
 const highlights = document.querySelectorAll('.article-content div.highlight');
-const copyText = '📄 copy';
-const copiedText = '✓ copied!';
+const copyText = '<复制>';
+const copiedText = '<已复制>';
 
 highlights.forEach(highlight => {
     // 避免重复添加
