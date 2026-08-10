@@ -12,7 +12,7 @@
     --tag-border-radius: 8px;
     --section-separation: 40px;
     --article-font-size: 2.0rem;
-    --article-line-height: 3.6;
+    --article-line-height: 10.8;
     --code-background-color: #e6e6e6;
     --code-text-color: #91d0fa;
 
@@ -550,14 +550,14 @@ h1, h2, h3, h4 {
 
 // 标题与正文间距收紧（行距已够大，标题间距不用太大）
 .article-content h2 {
-    margin-top: 1.5em;
-    margin-bottom: 0.4em;
+    margin-top: 235px;
+    margin-bottom: 0.3em;
 }
 
 .article-content h3,
 .article-content h4,
 .article-content h5 {
-    margin-top: 1.2em;
+    margin-top: 215px;
     margin-bottom: 0.3em;
 }
 
