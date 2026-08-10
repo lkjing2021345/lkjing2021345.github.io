@@ -7,6 +7,8 @@ relativeURLs = false
 theme = "stack"
 
 [params]
+  favicon = "/img/avatar.jpg"
+
   [params.sidebar]
     avatar = "/img/avatar.jpg"
     subtitle = "网络安全爱好者"
