@@ -5,6 +5,7 @@ interface pageData {
     content: string,
     image?: string,
     tags: string[],
+    categories: string[],
     preview: string,
     matchCount: number
 }
@@ -192,20 +193,32 @@ class Search {
                 }
             }
 
+            /// category 匹配：命中分类即算一次匹配，预览显示 #分类
+            let categoryMatchCount = 0;
+            const categoryPreview: string[] = [];
+            if (Array.isArray(item.categories)) {
+                for (const category of item.categories) {
+                    if (category && category.match(regex)) {
+                        categoryMatchCount++;
+                        categoryPreview.push(`<mark>#${replaceHTMLEnt(category)}</mark>`);
+                    }
+                }
+            }
+
             if (titleMatches.length > 0) result.title = Search.processMatches(result.title, titleMatches, false);
             if (contentMatches.length > 0) {
                 result.preview = Search.processMatches(result.content, contentMatches);
             }
-            else if (tagPreview.length > 0) {
-                /// 正文没有命中但标签命中：预览显示命中的标签
-                result.preview = tagPreview.join(' ');
+            else if (tagPreview.length > 0 || categoryPreview.length > 0) {
+                /// 正文没有命中但标签/分类命中：预览显示命中的标签与分类
+                result.preview = [...tagPreview, ...categoryPreview].join(' ');
             }
             else {
                 /// If there are no matches in the content, use the first 140 characters as preview
                 result.preview = replaceHTMLEnt(result.content.substring(0, 140));
             }
 
-            result.matchCount = titleMatches.length + contentMatches.length + tagMatchCount;
+            result.matchCount = titleMatches.length + contentMatches.length + tagMatchCount + categoryMatchCount;
             if (result.matchCount > 0) results.push(result);
         }
 
