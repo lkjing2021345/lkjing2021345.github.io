@@ -95,6 +95,15 @@ code {
     }
 }
 
+// 正文背后的圆角白色背景框，与页面背景区分
+.article-page .main-article .article-content {
+    background: var(--card-background);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--shadow-l1);
+    margin: 0;
+}
+
 // 单页(文章页)封面图：限高裁切，避免大图撑爆
 .article-page .main-article .article-image img {
     width: 100%;
