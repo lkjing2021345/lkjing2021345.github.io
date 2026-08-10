@@ -1,7 +1,7 @@
 +++
 title = 'Transformer学习记录'
 date = '2026-08-09T14:00:00+08:00'
-draft = false          # 写完改成 false 才发布
+draft = true          # 写完改成 false 才发布
 image = '/img/fufu.jpg' # 可选
 categories = ['技术']   # 可选,分类组件
 tags = ['hugo', 'css'] # 可选,标签云
