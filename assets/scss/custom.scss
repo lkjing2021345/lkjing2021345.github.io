@@ -82,12 +82,13 @@ code {
     word-break: break-all;
 }
 
-// 行内代码：蓝字 #91D0FA + 灰底 #E6E6E6（仅行内，不影响代码块）
+// 行内代码：蓝字 #91D0FA + 灰底 #E6E6E6 + 继承正文字体（仅行内，不影响代码块）
 .article-content code:not(pre code) {
     color: var(--code-text-color);
     background-color: var(--code-background-color);
     padding: 2px 5px;
     border-radius: 4px;
+    font-family: inherit;
 }
 
 // =============================================
