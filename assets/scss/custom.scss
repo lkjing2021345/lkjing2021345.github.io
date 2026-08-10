@@ -22,9 +22,32 @@
     }
 }
 
-// =============================================
-// 2. 选中文字颜色
-// =============================================
+// ============================================================
+// 2. 可爱活泼字体（Baloo 2 拉丁 + 站酷快乐体 中文）
+// ============================================================
+@font-face {
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/baloo-2@5.1.0/files/baloo-2-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'ZCOOL KuaiLe';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/zcool-kuaile@5.1.0/files/zcool-kuaile-chinese-simplified-400-normal.woff2') format('woff2');
+}
+
+:root {
+    --base-font-family: 'Baloo 2', 'ZCOOL KuaiLe', var(--sys-font-family), sans-serif;
+}
+
+// ============================================================
+// 3. 选中文字颜色
+// ============================================================
 ::selection {
     color: #fff;
     background: #34495e;
