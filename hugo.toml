@@ -6,9 +6,12 @@ canonifyURLs = false
 relativeURLs = false
 theme = "stack"
 
+[markup.tableOfContents]
+    startLevel = 1
+    endLevel = 6
+
 [params]
   favicon = "/img/avatar.jpg"
-
   [params.sidebar]
     avatar = "/img/avatar.jpg"
     subtitle = "网络安全爱好者"
