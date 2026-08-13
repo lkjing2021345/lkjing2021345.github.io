@@ -273,3 +273,39 @@ highlights.forEach(highlight => {
     window.addEventListener('resize', resize);
     requestAnimationFrame(frame);
 })();
+
+// ============================================================
+// 目录折叠：有子级的条目右侧显示灰色下箭头，点击展开/收起
+// ============================================================
+(() => {
+    const nav = document.getElementById('TableOfContents');
+    if (!nav) return;
+
+    nav.querySelectorAll('li').forEach(li => {
+        const sub = li.querySelector(':scope > ul');
+        if (!sub) return;
+
+        sub.classList.add('toc-sub');
+        li.classList.add('has-sub');
+
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'toc-toggle';
+        btn.title = '展开/收起';
+        btn.setAttribute('aria-expanded', 'false');
+        btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const open = li.classList.toggle('toc-open');
+            btn.setAttribute('aria-expanded', String(open));
+        });
+
+        const a = li.querySelector(':scope > a');
+        if (a && a.nextSibling) {
+            a.parentNode.insertBefore(btn, a.nextSibling);
+        } else {
+            li.appendChild(btn);
+        }
+    });
+})();

@@ -582,6 +582,43 @@ h1, h2, h3, h4 {
     max-height: 70vh;
     overflow-y: auto;
 
+    // 可折叠：有子级的条目右侧箭头
+    li {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 2px 0;
+    }
+
+    li > a {
+        flex: 1;
+    }
+
+    .toc-sub {
+        display: none;
+        flex-basis: 100%;
+    }
+
+    li.toc-open > .toc-sub {
+        display: block;
+    }
+
+    .toc-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 2px 6px;
+        color: #999;
+        display: flex;
+        align-items: center;
+        transition: transform 0.2s ease;
+    }
+
+    li.toc-open > .toc-toggle {
+        transform: rotate(180deg);
+        color: var(--accent-color);
+    }
+
     ul {
         list-style: none;
         padding-left: 12px;
