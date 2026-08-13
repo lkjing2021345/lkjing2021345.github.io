@@ -302,8 +302,9 @@ highlights.forEach(highlight => {
         });
 
         const a = li.querySelector(':scope > a');
-        if (a && a.nextSibling) {
-            a.parentNode.insertBefore(btn, a.nextSibling);
+        // 箭头放在链接左侧
+        if (a) {
+            li.insertBefore(btn, a);
         } else {
             li.appendChild(btn);
         }
