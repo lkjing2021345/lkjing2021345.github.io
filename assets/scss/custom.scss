@@ -700,8 +700,8 @@ h1, h2, h3, h4 {
 
 #oml2d-stage {
     position: fixed !important;
-    left: 20px !important;
-    bottom: 90px !important;
+    left: 6px !important;
+    bottom: 6px !important;
     right: auto !important;
     top: auto !important;
     z-index: 998;
@@ -714,7 +714,18 @@ h1, h2, h3, h4 {
 @media (max-width: 767px) {
     #oml2d-stage {
         left: 4px !important;
-        bottom: 70px !important;
+        bottom: 4px !important;
+    }
+}
+
+// 看板娘让位：左侧菜单底部(DarkMode 等)上移，避开模型区域
+.left-sidebar .menu-bottom-section {
+    margin-bottom: 300px;
+}
+
+@media (max-width: 767px) {
+    .left-sidebar .menu-bottom-section {
+        margin-bottom: 200px;
     }
 }
 
