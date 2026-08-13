@@ -533,7 +533,7 @@ h1, h2, h3, h4 {
     text-wrap: balance;
 }
 
-// 正文标题：黑体加粗 + 行首黑色粗线 + 标题字号（28/23/20px 层级）
+// 正文标题：黑体加粗 + 行首圆头黑条（上下圆角）+ 标题字号层级
 .article-content {
     font-size: var(--article-font-size);
     line-height: var(--article-line-height);
@@ -545,8 +545,44 @@ h1, h2, h3, h4 {
 .article-content h4,
 .article-content h5 {
     font-weight: 700;
-    border-left: 4px solid #000;
+    position: relative;
+    border-left: none;
+    padding-left: 16px;
+}
+
+// 圆头黑条
+.article-content h1::before,
+.article-content h2::before,
+.article-content h3::before,
+.article-content h4::before,
+.article-content h5::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    bottom: 0.2em;
+    width: 4px;
+    border-radius: 2px;
+    background: #000;
+}
+
+[data-scheme="dark"] .article-content h1::before,
+[data-scheme="dark"] .article-content h2::before,
+[data-scheme="dark"] .article-content h3::before,
+[data-scheme="dark"] .article-content h4::before,
+[data-scheme="dark"] .article-content h5::before {
+    background: #fff;
+}
+
+// 图片注解（"图 N:" 开头的标题）不显示黑条
+.article-content .caption-heading {
+    border-left: none;
     padding-left: 12px;
+    font-weight: 600;
+}
+
+.article-content .caption-heading::before {
+    display: none;
 }
 
 .article-content h2 { font-size: 2.6rem; }
@@ -565,14 +601,6 @@ h1, h2, h3, h4 {
 .article-content h5 {
     margin-top: 16px;
     margin-bottom: 12px;
-}
-
-[data-scheme="dark"] .article-content h1,
-[data-scheme="dark"] .article-content h2,
-[data-scheme="dark"] .article-content h3,
-[data-scheme="dark"] .article-content h4,
-[data-scheme="dark"] .article-content h5 {
-    border-left-color: #fff;
 }
 
 // =============================================
