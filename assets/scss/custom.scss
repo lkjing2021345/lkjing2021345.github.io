@@ -694,8 +694,10 @@ h1, h2, h3, h4 {
 }
 
 // Live2D 看板娘：左下角悬浮（库内部用 #oml2d-stage 装 canvas）
-#oml2d {
-    pointer-events: none;
+// 整个组件区域可点击(含库自带的休息/换装/主题/退出按钮)
+#oml2d,
+#oml2d * {
+    pointer-events: auto;
 }
 
 #oml2d-stage {
