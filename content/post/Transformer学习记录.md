@@ -171,3 +171,5 @@ Masked在这里的意思是掩码，如果有学过密码学的朋友对于这�
 所以，最后回到为什么我们需要Transformer，首先它的架构使得训练成本很低，其次它的并行计算能力让它比RNN的训练快多了，最后，就是长距离依赖能力，由于Transformer的这个自注意力机制，导致无论上下文有多长，它都可以注意到。
 
 {{< figure src="/illustration/复杂度对比.png" title="图 6：Transformer模型的架构复杂度对比">}}
+
+- tips：本文章大部分灵感来自于https://www.bilibili.com/video/BV1xoJwzDESD/，特此做出感谢，也推荐大家去看看这个视频加深理解。
