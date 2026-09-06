@@ -24,6 +24,10 @@ theme = "stack"
     toc = true
     readingTime = true
     math = true
+    katex = [
+      { command = "\\text", arg = "1" },
+      { command = "\\tilde", arg = "1" },
+    ]
 
   [params.widgets]
     homepage = [
