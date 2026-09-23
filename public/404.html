@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+    <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="网络安全爱好者">
 <title>404 Page not found</title>
 
 
-<link rel="canonical" href="http://localhost:1313/404.html">
+<link rel="canonical" href="https://lkjing2021345.github.io/404.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
@@ -14,9 +14,9 @@
 
 <link rel="stylesheet" href="/scss/style.min.f29407a84de256e9ed14c32074c3532e3582f705b0d25cc97b85401f071d9cb7.css"><meta property='og:title' content="404 Page not found">
 <meta property='og:description' content="网络安全爱好者">
-<meta property='og:url' content='http://localhost:1313/404.html'>
+<meta property='og:url' content='https://lkjing2021345.github.io/404.html'>
 <meta property='og:site_name' content='Shimmer の blog'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-09-05T18:21:31&#43;08:00 '/>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-09-22T21:46:53&#43;08:00 '/>
 <meta name="twitter:title" content="404 Page not found">
 <meta name="twitter:description" content="网络安全爱好者">
     <link rel="shortcut icon" href="/img/avatar.jpg" />
@@ -280,7 +280,7 @@
         2026 Shimmer の blog
     </section><section class="stats">
         
-            共计 7 篇博客，9 千字
+            共计 3 篇博客，7 千字
         
     </section>
     
@@ -307,7 +307,7 @@
             </main>
         </div>
         
-<script type="text/javascript" src="/ts/main.7fb81dfd22336a4af48b33b71b6acef253ec7dcc7cce2bcd76d76894e61b2b54.js" defer></script><script type="text/javascript" src="/ts/custom.177c44b164a684a9f802e78e550c92e9650bf6acb7b92cf374aeaecbcb80b356.js" defer></script>
+<script type="text/javascript" src="/ts/main.7e722f5bfbf67e9c060067252d4468151928a77b3e1abf7bce7adf623e989b08.js" defer></script><script type="text/javascript" src="/ts/custom.63d6f0819b85422175a93bb44fbb9c7ed67f28f60689c490142b98906f648dc0.js" defer></script>
 <script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css" crossorigin="anonymous" />
 <script>
@@ -347,7 +347,39 @@
                 canvasSize: { width: 320, height: 420 },
                 mobileDisplay: { enable: true, size: 160 },
                 mouse: { enable: true },
-                transitionTime: 800
+                transitionTime: 800,
+                
+                menus: {
+                    items: [
+                        {
+                            id: 'Rest',
+                            icon: 'icon-rest',
+                            title: '休息',
+                            onClick(i) {
+                                i.statusBarOpen(i.options.statusBar?.restMessage);
+                                i.clearTips();
+                                i.setStatusBarClickEvent(() => {
+                                    i.statusBarClose();
+                                    i.stageSlideIn();
+                                    i.statusBarClearEvents();
+                                });
+                                i.stageSlideOut();
+                            }
+                        },
+                        {
+                            id: 'SwitchModelClothes',
+                            icon: 'icon-skin',
+                            title: '切换衣服',
+                            onClick: (i) => i.loadNextModelClothes()
+                        },
+                        {
+                            id: 'SwitchModel',
+                            icon: 'icon-switch',
+                            title: '切换模型',
+                            onClick: (i) => i.loadNextModel()
+                        }
+                    ]
+                }
             });
             window.oml2d = inst;
             

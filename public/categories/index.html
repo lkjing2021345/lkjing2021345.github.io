@@ -16,7 +16,7 @@
 <meta property='og:description' content="网络安全爱好者">
 <meta property='og:url' content='https://lkjing2021345.github.io/categories/'>
 <meta property='og:site_name' content='Shimmer の blog'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-08-09T14:00:00&#43;08:00 '/>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-09-22T21:46:53&#43;08:00 '/>
 <meta name="twitter:title" content="Categories">
 <meta name="twitter:description" content="网络安全爱好者"><link rel="alternate" type="application/rss&#43;xml" href="https://lkjing2021345.github.io/categories/index.xml">
     <link rel="shortcut icon" href="/img/avatar.jpg" />
@@ -279,7 +279,7 @@
                     <a href="/page/archives/#2026">
                         
                             <span class="year">2026</span>
-                            <span class="count">2</span>
+                            <span class="count">3</span>
                         
                     </a> 
                 </div>
@@ -353,8 +353,16 @@
                 ML
             </a>
         
+            <a href="/tags/python/">
+                Python
+            </a>
+        
             <a href="/tags/transformer/">
                 Transformer
+            </a>
+        
+            <a href="/tags/%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/">
+                虚拟环境
             </a>
         
             <a href="/tags/%E8%AE%B0%E5%BD%95/">
@@ -397,7 +405,7 @@
     <a href="/categories/%E6%8A%80%E6%9C%AF/">
         <div class="article-details">
             <h2 class="article-title">技术</h2>
-                <footer class="article-meta"><span class="article-description">1 page</span>
+                <footer class="article-meta"><span class="article-description">2 pages</span>
                 </footer></div>
     </a>
 </article>
@@ -422,7 +430,7 @@
         2026 Shimmer の blog
     </section><section class="stats">
         
-            共计 2 篇博客，6 千字
+            共计 3 篇博客，7 千字
         
     </section>
     
@@ -489,7 +497,39 @@
                 canvasSize: { width: 320, height: 420 },
                 mobileDisplay: { enable: true, size: 160 },
                 mouse: { enable: true },
-                transitionTime: 800
+                transitionTime: 800,
+                
+                menus: {
+                    items: [
+                        {
+                            id: 'Rest',
+                            icon: 'icon-rest',
+                            title: '休息',
+                            onClick(i) {
+                                i.statusBarOpen(i.options.statusBar?.restMessage);
+                                i.clearTips();
+                                i.setStatusBarClickEvent(() => {
+                                    i.statusBarClose();
+                                    i.stageSlideIn();
+                                    i.statusBarClearEvents();
+                                });
+                                i.stageSlideOut();
+                            }
+                        },
+                        {
+                            id: 'SwitchModelClothes',
+                            icon: 'icon-skin',
+                            title: '切换衣服',
+                            onClick: (i) => i.loadNextModelClothes()
+                        },
+                        {
+                            id: 'SwitchModel',
+                            icon: 'icon-switch',
+                            title: '切换模型',
+                            onClick: (i) => i.loadNextModel()
+                        }
+                    ]
+                }
             });
             window.oml2d = inst;
             

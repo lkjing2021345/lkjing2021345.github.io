@@ -37,7 +37,39 @@
                 canvasSize: { width: 320, height: 420 },
                 mobileDisplay: { enable: true, size: 160 },
                 mouse: { enable: true },
-                transitionTime: 800
+                transitionTime: 800,
+                // 覆盖默认菜单：去掉库自带的"关于"项（它硬编码跳转到第三方站点 oml2d.com）
+                menus: {
+                    items: [
+                        {
+                            id: 'Rest',
+                            icon: 'icon-rest',
+                            title: '休息',
+                            onClick(i) {
+                                i.statusBarOpen(i.options.statusBar?.restMessage);
+                                i.clearTips();
+                                i.setStatusBarClickEvent(() => {
+                                    i.statusBarClose();
+                                    i.stageSlideIn();
+                                    i.statusBarClearEvents();
+                                });
+                                i.stageSlideOut();
+                            }
+                        },
+                        {
+                            id: 'SwitchModelClothes',
+                            icon: 'icon-skin',
+                            title: '切换衣服',
+                            onClick: (i) => i.loadNextModelClothes()
+                        },
+                        {
+                            id: 'SwitchModel',
+                            icon: 'icon-switch',
+                            title: '切换模型',
+                            onClick: (i) => i.loadNextModel()
+                        }
+                    ]
+                }
             });
             window.oml2d = inst;
             // 点击看板娘 → 随机说一句话
