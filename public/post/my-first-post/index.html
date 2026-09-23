@@ -574,6 +574,14 @@
                             icon: 'icon-switch',
                             title: '切换模型',
                             onClick: (i) => i.loadNextModel()
+                        },
+                        {
+                            id: 'About',
+                            icon: 'icon-about',
+                            title: '关于',
+                            onClick() {
+                                window.open('https://oml2d.hacxy.cn/', '_blank', 'noopener');
+                            }
                         }
                     ]
                 }

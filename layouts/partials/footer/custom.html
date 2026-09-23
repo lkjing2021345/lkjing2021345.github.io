@@ -38,7 +38,7 @@
                 mobileDisplay: { enable: true, size: 160 },
                 mouse: { enable: true },
                 transitionTime: 800,
-                // 覆盖默认菜单：去掉库自带的"关于"项（它硬编码跳转到第三方站点 oml2d.com）
+                // 自定义菜单：保留默认项，并把"关于"指向官方文档站（库内置的 oml2d.com 域名已被他人抢注为垃圾站）
                 menus: {
                     items: [
                         {
@@ -67,6 +67,14 @@
                             icon: 'icon-switch',
                             title: '切换模型',
                             onClick: (i) => i.loadNextModel()
+                        },
+                        {
+                            id: 'About',
+                            icon: 'icon-about',
+                            title: '关于',
+                            onClick() {
+                                window.open('https://oml2d.hacxy.cn/', '_blank', 'noopener');
+                            }
                         }
                     ]
                 }
