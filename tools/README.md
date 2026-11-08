@@ -38,6 +38,16 @@ summary = '一句话摘要'         # 可选
 
 ## 插入图片
 
+### 最快：直接粘贴剪贴板里的图片
+
+截图或复制图片后，不用先存文件：
+
+- **在 nvim 里**：按 `<A-i>`（Alt+i，普通/插入模式都行）或 `<Space>ip`，
+  图片自动存进 `static/img/pasted-时间戳.png`，并在文章末尾插入 `![](/img/...)`。
+- **在终端里**：`bpaste`（= `tools/clipboard-image.sh`）打印 Markdown；
+  `bpaste --append 文章.md` 直接追加到文章末尾；`bpaste --append-latest` 追加到最新修改的文章。
+- 默认会把宽度超过 1600px 的图缩小，`--no-resize` 可关闭。
+
 图片放 `static/img/`，正文里用 `/img/文件名` 引用（`static/` 本身不会出现在 URL 里）。
 
 **方式一：命令行复制 + 自动生成 Markdown**
