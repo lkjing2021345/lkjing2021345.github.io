@@ -48,6 +48,20 @@ summary = '一句话摘要'         # 可选
   `bpaste --append 文章.md` 直接追加到文章末尾；`bpaste --append-latest` 追加到最新修改的文章。
 - 默认会把宽度超过 1600px 的图缩小，`--no-resize` 可关闭。
 
+### 在 Obsidian 里编辑（Ctrl+V 直接粘贴）
+
+仓库已经预置了 `.obsidian/app.json`，用它当 vault 打开即可：
+
+1. Obsidian → 左下角「打开其他仓库」→「打开文件夹作为仓库」→ 选 `~/blog`
+2. 直接把截图/图片 `Ctrl+V` 粘进文章，Obsidian 会自动：
+   - 把图片存到 `static/img/`
+   - 插入 `![](static/img/Pasted%20image%20....png)`
+3. Hugo 侧有 `layouts/_markup/render-image.html`，会把 `static/img/...`、`../static/img/...` 统一改写成 `/img/...`，所以线上路径是对的，Obsidian 里也能正常预览。
+
+预置的关键设置：附件目录 `static/img`、使用 Markdown 链接、新链接格式「仓库内绝对路径」。如果 Obsidian 里粘贴的图片没有进 `static/img`，检查「设置 → 文件与链接 → 新附件的默认位置」。
+
+> 想让 Obsidian 的图片名也变成 `pasted-时间戳`，可以装社区插件 **Paste image rename**；不装也能正常用，只是名字是 `Pasted image 2026...`。
+
 图片放 `static/img/`，正文里用 `/img/文件名` 引用（`static/` 本身不会出现在 URL 里）。
 
 **方式一：命令行复制 + 自动生成 Markdown**

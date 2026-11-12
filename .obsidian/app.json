@@ -1,0 +1,12 @@
+{
+  "attachmentFolderPath": "static/img",
+  "useMarkdownLinks": true,
+  "newLinkFormat": "absolute",
+  "alwaysUpdateLinks": true,
+  "userIgnoreFilters": [
+    "public/",
+    "themes/",
+    "resources/",
+    "tools/"
+  ]
+}
